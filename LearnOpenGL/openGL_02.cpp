@@ -125,8 +125,10 @@ int main()
     glBindVertexArray(0);
 
 
-    // uncomment this call to draw in wireframe polygons.
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    // draw in wireframe polygons
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
 
     // render loop
     // -----------
