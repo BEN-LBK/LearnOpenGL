@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B564A447274BE18400E181CD /* openGL_03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B564A446274BE18400E181CD /* openGL_03.cpp */; };
 		B5A45759273ECA4D00E1D624 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A45758273ECA4C00E1D624 /* OpenGL.framework */; };
 		B5A4575B273ECAE600E1D624 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A4575A273ECAE600E1D624 /* libGLEW.2.2.0.dylib */; };
 		B5A4575D273ECAF400E1D624 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A4575C273ECAF400E1D624 /* libglfw.3.3.dylib */; };
 		B5A4575F273ECB6500E1D624 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = B5A4575E273ECB6500E1D624 /* glad.c */; };
-		B5A45763273ED26B00E1D624 /* openGL_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5A45762273ED26B00E1D624 /* openGL_02.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,12 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B564A446274BE18400E181CD /* openGL_03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = openGL_03.cpp; sourceTree = "<group>"; };
 		B5A4574D273EC94D00E1D624 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A45758273ECA4C00E1D624 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B5A4575A273ECAE600E1D624 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
 		B5A4575C273ECAF400E1D624 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.4/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		B5A4575E273ECB6500E1D624 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
-		B5A45762273ED26B00E1D624 /* openGL_02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = openGL_02.cpp; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				B5A4575E273ECB6500E1D624 /* glad.c */,
-				B5A45762273ED26B00E1D624 /* openGL_02.cpp */,
+				B564A446274BE18400E181CD /* openGL_03.cpp */,
 			);
 			path = LearnOpenGL;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5A4575F273ECB6500E1D624 /* glad.c in Sources */,
-				B5A45763273ED26B00E1D624 /* openGL_02.cpp in Sources */,
+				B564A447274BE18400E181CD /* openGL_03.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
