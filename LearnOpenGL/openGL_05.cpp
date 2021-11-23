@@ -10,12 +10,15 @@
 #include "Shader/Shader.hpp"
 
 #include <iostream>
+#include <cmath>
 
 void framebuffer_size_callback(GLFWwindow * window, int width, int height);
 void processInput(GLFWwindow *window);
 
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGTH = 600;
+
+float xOffset = 0.0f;
 
 int main()
 {
@@ -98,6 +101,17 @@ int main()
         glClearColor(0.2f,0.3f,0.3f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
+        // update key value
+        int vertexPosOffset = glGetUniformLocation(ourShader.ID, "xOffset");
+        glUseProgram(ourShader.ID);
+        glUniform1f(vertexPosOffset, xOffset);
+        
+        float timeValue = glfwGetTime();
+        float redValue = sin(timeValue)/2.0f + 0.5f;
+        int colorOffset = glGetUniformLocation(ourShader.ID, "cOffset");
+        glUseProgram(ourShader.ID);
+        glUniform3f(colorOffset, redValue, redValue, redValue);
+        
         // render the triangle
         ourShader.use();
         glBindVertexArray(VAO);
@@ -122,6 +136,14 @@ void processInput(GLFWwindow* window)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, true);
+    }
+    else if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS){
+        xOffset += 0.001;
+        std::cout << "processInput ++" << xOffset << std::endl;
+    }
+    else if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS){
+        xOffset -= 0.001;
+        std::cout << "processInput --" << xOffset << std::endl;
     }
 }
 
